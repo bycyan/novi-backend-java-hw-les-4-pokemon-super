@@ -1,22 +1,21 @@
 public class ElectricPokemon extends Pokemon {
-    String attackName;
-    int electricNum;
+    private final String electricAttack;
 
+    public ElectricPokemon(String name, int level, int hp, int attackStrength, String electricAttack) {
+        super(name, level, hp, attackStrength);
+        super.setType("Electric");
 
-    public ElectricPokemon(String name, int level, int hp, int attackDamage, String attackName, int electricNum) {
-        super(name, level, hp, attackDamage);
-        this.attackName = attackName;
-        this.electricNum = electricNum;
+        this.electricAttack = electricAttack;
     }
 
-    //Attack Method
-    public void discharge() {
-        if (electricNum <= 0) {
-            System.out.println(super.getName() + " is out of Volts..");
-        } else {
-            System.out.println(super.getName() + " attacks with a Discharge!.");
-            electricNum--;
-        }
+    @Override
+    public void chooseYou() {
+        System.out.println(super.getName() + " I choose you!");
     }
+
+    public String getElectricAttack(){
+        return electricAttack;
+    }
+
 
 }

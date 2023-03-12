@@ -9,13 +9,10 @@ public class GrassPokemon extends Pokemon {
         this.grassNum = grassNum;
     }
 
-    //Attack Method
-    public void magicalLeaf() {
-        if (grassNum <= 0) {
-            System.out.println(super.getName() + " is out of Grass..");
-        } else {
-            System.out.println(super.getName() + " attacks with a Magical Leaf!.");
-            grassNum--;
-        }
+    @Override
+    public void chooseYou() {
+        System.out.println(super.getName() + " I choose you!.");
     }
+
 }
+
