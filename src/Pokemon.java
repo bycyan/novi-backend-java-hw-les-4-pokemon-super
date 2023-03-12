@@ -4,45 +4,55 @@ public abstract class Pokemon {
     String name;
     int level;
     int hp;
+    int attackDamage;
 
-    //1 constructor
-    public Pokemon(String name, int level, int hp) {
+    //Constructor
+    public Pokemon(String name, int level, int hp, int attackDamage) {
         this.name = name;
         this.level = level;
         this.hp = hp;
+        this.attackDamage = attackDamage;
     }
 
-    //2 methods
+    //Methods
 
+    //Pokemon attack
     public void attack(){
         System.out.println(name + " performs attack");
     }
 
+    //Pokémon level up
     public void levelUp(){
         this.level++;
         System.out.println("Congratulations, " + name + " has now reached level " + level);
     }
 
-
-    //2 getters
-
+    //getters & setters
     public String getName() {
         return name;
+    }
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getLevel() {
         return level;
     }
-
-    //2 setters
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public void setLevel(int level) {
         this.level = level;
     }
 
+    public int getHp(){
+        return hp;
+    }
+    public void setHp(int hp) {
+        this.hp = hp;
+    }
 
+    public int getAttack(int attack) {
+        return attack;
+    }
+    public void setAttack (int attack){
+
+    }
 }

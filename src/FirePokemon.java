@@ -1,18 +1,21 @@
-public class FirePokemon extends Pokemon{
-    String eats;
-    private String attack;
+public class FirePokemon extends Pokemon {
+    String attackName;
+    int fireNum;
 
-    public FirePokemon(String name, int level, int hp, String eats, String attack) {
-        super(name, level, hp);
-        this.eats = eats;
-        this.attack = attack;
-
-    }
-    void inferno(){
-        System.out.println(super.getName() + attack);
+    public FirePokemon(String name, int level, int hp, int attackDamage, String attackName, int fireNum) {
+        super(name, level, hp, attackDamage);
+        this.attackName = attackName;
+        this.fireNum = fireNum;
     }
 
-    public void flameThrower(){
-        System.out.println(super.getName() + " shoots a massive " + attack + " flame at its opponent.");
+    //Attack Method
+    public void flameThrower() {
+        if (fireNum <= 0) {
+            System.out.println(super.getName() + " is out of Flames..");
+        } else {
+            System.out.println(super.getName() + " attacks with a Flame Thrower!.");
+            fireNum--;
+        }
+
     }
 }
