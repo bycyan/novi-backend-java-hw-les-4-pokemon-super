@@ -1,18 +1,20 @@
 public class GrassPokemon extends Pokemon {
-    String attackName;
-    int grassNum;
+    private final String grassAttack;
 
+    public GrassPokemon(String name, int level, int hp, int attackStrength, String grassAttack) {
+        super(name, level, hp, attackStrength);
+        super.setType("Grass");
 
-    public GrassPokemon(String name, int level, int hp, int attackDamage, String attackName, int grassNum) {
-        super(name, level, hp, attackDamage);
-        this.attackName = attackName;
-        this.grassNum = grassNum;
+        this.grassAttack = grassAttack;
     }
 
     @Override
     public void chooseYou() {
-        System.out.println(super.getName() + " I choose you!.");
+        System.out.println(super.getName() + " I choose you!");
     }
 
+    public String getGrassAttack(){
+        return grassAttack;
+    }
 }
 

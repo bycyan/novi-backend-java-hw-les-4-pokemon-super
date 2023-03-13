@@ -10,7 +10,7 @@ public class FirePokemon extends Pokemon {
 
     @Override
     public void chooseYou() {
-        System.out.println(super.getName() + " I choose you!.");
+        System.out.println(super.getName() + " I choose you!");
     }
 
     public String getFireAttack(){

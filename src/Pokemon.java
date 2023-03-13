@@ -23,15 +23,9 @@ public abstract class Pokemon {
         System.out.println("Congratulations, " + name + " has now reached level " + level);
     }
 
-    //Pokemon attack
-        public void attack(){
-
-        System.out.println(name + " performs attack ");
-    }
-
     //Pokemon statusLine Method
     public void statusLine(){
-        System.out.println("This "+ getType()+" Pokémon has reached the level of "+getLevel()+" and has "+getHp()+" hp left.");
+        System.out.println("This "+ getType()+" Pokémon of level "+getLevel()+" has "+getHp()+" hp left.");
     }
 
     //Getters & Setters
@@ -53,11 +47,5 @@ public abstract class Pokemon {
     public void setType(String type) {
         this.type = type;
     }
-
-    //Methods
-
-
-
-    //getters & setters
 
 }
